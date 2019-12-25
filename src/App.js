@@ -8,8 +8,8 @@ import git from './github-logo.png';
 import linkedin from './linkedin.png';
 import resume from './resume.png';
 import email from './email.png';
-
-
+import pdf from './resume.pdf';
+import Typing from 'react-typing-animation';
 
 
 
@@ -31,8 +31,13 @@ class App extends React.Component {
           height={200} />
         <Image className="img-fluid z-depth-3" alt="" src={logo} size='small' circular centered />
         <Header as='h1' textAlign='center'>
-          <Header.Content>Shivam Prajapati</Header.Content>
-           <Header.Subheader>Live life to the fullest...</Header.Subheader>
+          <Header.Content><h3>Hello & Welcome</h3></Header.Content>
+          <br />
+          <Header.Content>
+            <Typing hideCursor={false} speed={1}>
+                <span>I Am Shivam Prajapati.</span>
+              </Typing></Header.Content>
+           <Header.Subheader>"Live life to the fullest..."</Header.Subheader>
         </Header>
         <div style={{
             marginTop:'100px'
@@ -40,22 +45,22 @@ class App extends React.Component {
         <Grid centered>
         <Grid.Row centered>
           <Grid.Column>
-            <a>
+            <a href={'https://github.com/ShivamPrajapati-dev'}>
             <Image className="img-fluid z-depth-2" circular src={git} size='mini'/>
             </a>
           </Grid.Column>
           <Grid.Column>
-            <a>
+            <a href={'https://www.linkedin.com/in/shivam-prajapati-b5bbb0190/'}>
               <Image className="img-fluid z-depth-2" circular src={linkedin} size='mini'/>
             </a>
           </Grid.Column>
           <Grid.Column>
-            <a>
+            <a href={pdf}>
             <Image className="img-fluid z-depth-2" circular src={resume} size='mini'/>
             </a>
           </Grid.Column>
           <Grid.Column>
-            <a>
+            <a href={'mailto:shivam_bt18@iiitkalyani.ac.in'}>
               <Image className="img-fluid z-depth-2" circular src={email} size='mini'/>
             </a>
             </Grid.Column>
