@@ -27,7 +27,7 @@ class App extends React.Component {
     };
 
     return (
-      <div fluid>
+      <div className="main">
                 
         <div className="head">
           <h1 className="head-text">
