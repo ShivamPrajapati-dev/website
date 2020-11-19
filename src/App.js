@@ -1,13 +1,14 @@
 import React from 'react'
-import Lottie from 'react-lottie';
 import  animationData from './wave.json';
-import logo from './nik.jpg';
-import {Image, Header, Grid, Icon} from 'semantic-ui-react';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import git from './github-logo.png';
-import linkedin from './linkedin.png';
-import resume from './resume.png';
-import email from './email.png';
+import logo from './0.jpeg';
+import {Image, Header, Grid, Container} from 'semantic-ui-react';
+import { VscGithubInverted } from 'react-icons/vsc';
+import {IoLogoLinkedin} from 'react-icons/io';
+import {IoIosDocument} from 'react-icons/io';
+import {MdEmail} from 'react-icons/md';
+import {AiFillPhone} from 'react-icons/ai';
+import {SiTwitter} from 'react-icons/si';
+import {BsFillCircleFill} from 'react-icons/bs'
 import pdf from './resume.pdf';
 import Typing from 'react-typing-animation';
 
@@ -27,48 +28,99 @@ class App extends React.Component {
 
     return (
       <div fluid>
-        <Lottie options={defaultOptions}
-          height={200} />
-        <Image className="img-fluid z-depth-3" alt="" src={logo} size='small' circular centered />
-        <Header as='h1' textAlign='center'>
+                
+        <div className="head">
+          <h1 className="head-text">
+             <Typing hideCursor={false} speed={10}>
+                <span>"Shivam Prajapati"</span>
+              </Typing>
+          </h1>
+        </div>
+
+
+
+        <Image style={{
+            marginTop:'100px'
+          }} src={logo} size='small' circular centered/>
+        <Header as='h1' textAlign='center'centered>
           <Header.Content><h3>Hello & Welcome</h3></Header.Content>
           <br />
-          <Header.Content>
-            <Typing hideCursor={false} speed={1}>
-                <span>I Am Shivam Prajapati.</span>
-              </Typing></Header.Content>
-           <Header.Subheader>"Live life to the fullest..."</Header.Subheader>
+           
         </Header>
+        <Container text textAlign='justified'>
+            <p>
+            I am an experienced Back End Developer with a demonstrated history of working in the education management industry. Skilled in Firebase, Java, Android Development, Node.js, and Algorithms. Strong engineering professional with a Bachelor of Technology - BTech focused in Computer Science from Indian Institute of Information Technology Kalyani, West Bengal. 
+            </p>
+        </Container>
+
+
         <div style={{
-            marginTop:'100px'
-          }} centered>
+            marginTop:'50px'
+          }}>
         <Grid centered>
         <Grid.Row centered>
-          <Grid.Column>
-            <a href={'https://github.com/ShivamPrajapati-dev'}>
-            <Image className="img-fluid z-depth-2" circular src={git} size='mini'/>
-            </a>
-          </Grid.Column>
-          <Grid.Column>
+        <Grid.Column style={{
+            margin:'5px'
+          }} >
             <a href={'https://www.linkedin.com/in/shivam-prajapati-b5bbb0190/'}>
-              <Image className="img-fluid z-depth-2" circular src={linkedin} size='mini'/>
+              <IoLogoLinkedin size="2em" color="black" title="Linkedin"/>
             </a>
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column style={{
+            margin:'5px'
+          }} >
+            <a href={'https://github.com/ShivamPrajapati-dev'}>
+                <VscGithubInverted size ='2em' color="black" title="GitHub"/>            
+            </a>
+          </Grid.Column>
+         
+          <Grid.Column style={{
+            margin:'5px'
+          }} >
             <a href={pdf}>
-            <Image className="img-fluid z-depth-2" circular src={resume} size='mini'/>
+            <IoIosDocument size="2em" color="black" title="Resume"/>
             </a>
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column style={{
+            margin:'5px'
+          }} >
             <a href={'mailto:shivam_bt18@iiitkalyani.ac.in'}>
-              <Image className="img-fluid z-depth-2" circular src={email} size='mini'/>
+              <MdEmail size="2em" color="black" title="Email"/>
             </a>
             </Grid.Column>
         </Grid.Row>
       </Grid>
+      <div className='foot'>
+          
+          <Grid >
+            <Grid.Row className="grid">
+              <Grid.Column className="grid">
+                 <AiFillPhone color="white" size="1.5em"/>      
+              </Grid.Column>
+              <Grid.Column>
+                <h5 className="text-foot">+918960507109</h5>
+              </Grid.Column>
+               
+            </Grid.Row>
+            <Grid.Row className="grid">
+              <Grid.Column className="grid">
+                <a href="https://twitter.com/ShivamP47856405">
+                  <SiTwitter color="blue" size="1.7em"/>
+                </a>
+                      
+              </Grid.Column>
+              <Grid.Column className="grid">
+                <a href="https://devfolio.co/@Shivamprajapati">
+                  <BsFillCircleFill color="blue" size="1.7em"/>
+                </a>
+                 
+              </Grid.Column>
+            </Grid.Row>
+        </Grid>
+       
+      </div> 
+    </div>     
     </div>
-
-      </div>
 
     );
   }
