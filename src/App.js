@@ -9,7 +9,7 @@ import {MdEmail} from 'react-icons/md';
 import {AiFillPhone} from 'react-icons/ai';
 import {SiTwitter} from 'react-icons/si';
 import {BsFillCircleFill} from 'react-icons/bs'
-import pdf from './resume.pdf';
+import pdf from './document.pdf';
 import Typing from 'react-typing-animation';
 
 
@@ -38,7 +38,7 @@ class App extends React.Component {
         </div>
 
 
-
+        <div className="body">
         <Image style={{
             marginTop:'100px'
           }} src={logo} size='small' circular centered/>
@@ -90,6 +90,8 @@ class App extends React.Component {
             </Grid.Column>
         </Grid.Row>
       </Grid>
+      </div>
+
       <div className='foot'>
           
           <Grid >
